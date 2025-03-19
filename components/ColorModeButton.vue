@@ -12,15 +12,15 @@ const isDark = computed({
 
 <template>
   <ClientOnly>
-    <UButton :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
-             color="gray"
-             variant="ghost"
-             :aria-label="`Use ${isDark ? 'light' : 'dark'} theme`"
+    <UButton :icon="isDark ? 'i-heroicons-sun-20-solid' : 'i-heroicons-moon-20-solid'"
              @click="isDark = !isDark"
+             color="neutral"
+             variant="ghost"
+             aria-label="Color theme switcher"
              class="cursor-pointer" />
 
     <template #fallback>
-      <div class="w-8 h-8" />
+      <USkeleton class="w-8 h-8" :ui="{skeleton: {base: 'animate-ping bg-black'}}" />
     </template>
   </ClientOnly>
 </template>
