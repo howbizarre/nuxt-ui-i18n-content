@@ -1,6 +1,6 @@
 <template>
   <UApp>
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <ColorModeButton />
   </UApp>
 </template>
